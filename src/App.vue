@@ -1,4 +1,10 @@
-<template></template>
+<template>
+  <ul>
+    <li v-for="project in store.projects">
+      <a href="#" @click.prevent="getOneProject(project.slug)">{{ project.title }}</a>
+    </li>
+  </ul>
+</template>
 
 <script>
 import { store } from './data/store';
@@ -11,6 +17,7 @@ export default {
   data() {
     return {
       store,
+      activeProject: null
     }
   },
   methods: {
@@ -20,6 +27,14 @@ export default {
         .then((res) => {
           store.projects = res.data.results
           console.log(store.projects);
+        })
+    },
+    getOneProject(slug) {
+      axios.get(store.apiUrl + 'projects/' + slug)
+        .catch(error => { throw error; })
+        .then((res) => {
+          this.activeProject = res.data.results;
+          console.log(this.activeProject);
         })
     }
 
