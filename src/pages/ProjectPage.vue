@@ -1,6 +1,15 @@
 <template>
   <div v-if="project">
     {{ project.title }}
+    <div class="w-50">
+      <img class="w-100" :src="store.storageUploadsUrl + project.image" alt="">
+    </div>
+    <p>{{ project.description }}</p>
+    <ul>
+      <li v-for="technology in project.technologies">
+        {{ technology.name }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -20,12 +29,13 @@ export default {
   },
   methods: {
     getProject() {
-      axios.get(this.store.apiUrl + this.$route.params.slug)
+      axios.get(this.store.apiUrl + 'projects/' + this.$route.params.slug)
         .catch((error) => {
           throw error;
         })
         .then((res) => {
           this.project = res.data.results;
+          console.log(this.project);
         })
     }
   },
