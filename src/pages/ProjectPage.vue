@@ -1,13 +1,12 @@
 <template>
-  <router-view>
-  </router-view>
+  project
 </template>
 
 <script>
-import { store } from './data/store';
+import { store } from '../data/store.js';
 import axios from 'axios';
 export default {
-  name: "App",
+  name: "ProjectsPage",
   components: [
     ////////////////////////////////
   ],

@@ -1,19 +1,15 @@
 <template>
-  <router-view>
-  </router-view>
+  Not Found
 </template>
 
 <script>
-import { store } from './data/store';
-import axios from 'axios';
 export default {
-  name: "App",
+  name: "NotFound",
   components: [
     ////////////////////////////////
   ],
   data() {
     return {
-      store,
     }
   },
   methods: {
