@@ -1,5 +1,9 @@
 <template>
-  projects
+  <ul>
+    <li v-for="project in store.projects">
+      {{ project.title }}
+    </li>
+  </ul>
 </template>
 
 <script>
