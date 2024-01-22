@@ -8,3 +8,16 @@ $fa-font-path: "../webfonts" !default;
 @import "@fortawesome/fontawesome-free/scss/brands";
 
 @import 'bootstrap/scss/bootstrap.scss';
+
+/*
+ * GOOGLE FONT
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap');
+body {
+  font-family: 'Nunito', sans-serif;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
