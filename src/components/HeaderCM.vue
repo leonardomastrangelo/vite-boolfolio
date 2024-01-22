@@ -39,10 +39,6 @@ header {
   height: 200px;
   font-size: 0.9em;
 
-  .container {
-    position: relative;
-  }
-
   nav {
     display: flex;
     justify-content: space-between;
@@ -53,8 +49,9 @@ header {
     padding: 10px 100px;
     position: fixed;
     top: 55px;
-    left: 15%;
-    right: 15%;
+    left: 4%;
+    right: 4%;
+    z-index: 1000;
 
     #logo-container {
       width: 70px;

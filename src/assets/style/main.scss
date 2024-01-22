@@ -1,4 +1,4 @@
-@use './partials/variables';
+@use './partials/variables' as *;
 
 $fa-font-path: "../webfonts" !default;
 
@@ -13,11 +13,19 @@ $fa-font-path: "../webfonts" !default;
  * GOOGLE FONT
 */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap');
+
 body {
   font-family: 'Nunito', sans-serif;
+  background-color: $bg_body;
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+  h1 {
+    font-size: 5.3em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
   }
 }
